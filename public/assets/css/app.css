@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #19110b;
+}
+
 .top {
     background-color: #fff6f6;
     display: flex;
@@ -40,6 +45,7 @@
 
 .top .right strong {
     font-weight: 500;
+    color: #19110b;
 }
 
 .top .right .sign-in {
@@ -52,6 +58,10 @@
 .top .right .sign-in .sign-in-content {
     display: flex;
     flex-direction: column;
+}
+.top .right .sign-in .sign-in-content a {
+    text-decoration: none;
+    line-height: initial;
 }
 
 .top .right .cart {
@@ -126,6 +136,7 @@
 .box-content .content ._1content .thumbnail {
     display: block;
     margin: 10px auto;
+    width: 100%;
 }
 
 .box-content .content ._1content .category {
@@ -177,7 +188,7 @@
 }
 
 .box-content .content ._1content .action .add-to-cart i {
-    color: #f75454;
+    /* color: #f75454; */
 }
 
 .box-content .content ._1content .action .buy-now {}
@@ -203,4 +214,25 @@
 .footer span {
     font-size: 14px;
     font-weight: 400;
+}
+
+._1cart {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+._1cart .thumbnail {
+    margin-right: 20px;
+    max-width: 120px;
+}
+._1cart .infor {
+    padding-top: 10px;
+}
+._1cart .infor .title {}
+._1cart .infor .price {
+    font-size: 18px;
+    font-weight: 500;
 }
