@@ -17,15 +17,21 @@
         <div class="sign-in">
             <i class="user-icon far fa-user"></i>
             <div class="sign-in-content">
-                <span>Đăng nhập</span>
-                <strong>Tài khoản</strong>
+                @auth
+                <a href="{{ route('auth.logout') }}"><span>Đăng xuất</span></a>
+                @else
+                <a href="{{ route('auth.login') }}"><span>Đăng nhập</span></a>
+                @endauth
+                <a href={{ route('home') }}>
+                    <a href="{{ route('profile') }}">Tài khoản</a>
+                </a>
             </div>
         </div>
         <div class="cart">
             <i class="fas fa-shopping-cart"></i>
             <div class="cart-content">
-                <span>Giỏ hàng</span>
-                <strong>400,000 VND</strong>
+                <a href="{{ route('user.cart.index') }}"><span>Giỏ hàng</span></a>
+                <strong>{{ number_format($total_cart) }} VND</strong>
             </div>
         </div>
     </div>
