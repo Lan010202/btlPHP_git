@@ -4,12 +4,11 @@
             <div class="col-4">
                 <strong>Danh mục sách</strong>
                 <ul>
-                    <li>Sách mới</li>
-                    <li>Sách mới</li>
-                    <li>Sách mới</li>
-                    <li>Sách mới</li>
-                    <li>Sách mới</li>
-                    <li>Sách mới</li>
+                    @foreach ($cates as $cate)
+                    <li>
+                        <a href="#{{ $cate->slug }}">{{ $cate->title }}</a>
+                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
