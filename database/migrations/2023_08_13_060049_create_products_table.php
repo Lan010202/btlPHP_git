@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('thumbnail')->nullable();
             $table->json('images')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->integer('price')->default(0);
             $table->integer('category_id')->nullable();
             $table->timestamps();
